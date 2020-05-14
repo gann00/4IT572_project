@@ -22,9 +22,9 @@ jobs:
       - attach_workspace:
           at: .
       - run: pip3 install ansible boto boto3
-      - run: echo ${SSH_KEY_FILE_CONTENT} | sed 's/<newline_placeholder>/\n/g' > project.pem
       - run: chmod 400 project.pem
       - run: >
+          ANSIBLE_HOST_KEY_CHECKING=False
           ansible-playbook
           ansible/ec2deploy.yml
           --user=ubuntu
