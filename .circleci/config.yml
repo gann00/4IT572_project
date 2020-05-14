@@ -23,7 +23,7 @@ jobs:
           at: .
       - run: pip3 install ansible boto boto3
       - run: >
-          ANSIBLE_HOST_KEY_CHECKING=False
+          ansible all --list-hosts
           ansible-playbook
           ansible/ec2deploy.yml
           --user=ubuntu
