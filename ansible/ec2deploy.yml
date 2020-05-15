@@ -14,9 +14,9 @@
         wait: yes
         count: 1
         group: eshop
-        aws_access_key: 'ASIA5VRQNM46A4RTGDVW'
-        aws_secret_key: 'Rk6K5tz9I75qx6we1wKs/RjOL1+ImnyTVjYaYffN'
-        security_token: 'FwoGZXIvYXdzEFIaDEh/V6FPCgRk04YTRCLIAVlFm5fNrGIHiKgyYwe3x+IdZCgm1/75BoM9arAghGjAXMBuTvgHEc0TANdLmJoKGLvXtRaBLSGFSnBClbJmAyMEruWgj701WqqVj4xDcZ2vzc7KQ9TqlBjjIkSWxOvZoonqBo5t5JS5f7Y8kzCiY7F611mKvm96LowXliT6ra96LT/nqtNKFed+D/kdda55GrdjJiYnild8KJ2BEN1KOmqH+YHGP1hLdM3xBSe9pUJMpyGMciJxD8FajE6XmSZ37uNH2Py79caOKOqc+fUFMi1Z8UXsf73TUN2WwAk/SA8TfpYtf5XGhuPgTzRj9YMIBkGsQbiA97xrV30i/QU='
+        aws_access_key: 'ASIA5VRQNM46M2U6GPUO'
+        aws_secret_key: 'nmuox42SS47/nU1IaaL/9rfkbB6V8nPGdG99KFV'
+        security_token: 'FwoGZXIvYXdzEFYaDP7Crm+q7YizfD6ysCLIATYYNUga1JARIoKyRHwHUQKMBLkW4mcRRHwQvxByALuMDETbXKpwaCZB5j6hvrImRIBl+CUsbTzr8U262e4z6oUaOWkhZWGeNUjRscvtqQWshuopbdalYvl6aYMipYq+VqItVuzohjuIXW50pu8IpH/IdJ1trzslfpbELR2Yms1VgcsO6btxzhMoPuUK6LAYlZf/CQwYLw0MWPABg/u+jlGf+yYZrWftXGerbRLZz8U+AC3SMKQSPFx2q99U5eWId6GyN6lep2kLKPmW+vUFMi3vAB0iN/qkE3q5lDatNnTV1WHx3wJRHnZQwh8bxH0/a4A+oFi9uOXRiuRfC5g='
       register: ec2
 
     - name: Add instance host to group
@@ -31,6 +31,7 @@
 
 - name: Configure EC2
   hosts: launched
+
   connection: ssh
 
   tasks:
