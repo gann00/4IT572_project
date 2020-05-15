@@ -8,6 +8,7 @@ jobs:
     <<: *vse
     steps:
       - checkout
+      - add_ssh_keys
       - run: npm install
       - run: npm run test
       - run: npm run build
@@ -22,7 +23,7 @@ jobs:
       - attach_workspace:
           at: .
       - run: pip3 install ansible boto boto3
-      - add_ssh_keys
+      - run: chmod 400 project.pem
       - run: ansible all --list-hosts
       - run: ansible-playbook ./ansible/ec2deploy.yml --user ubuntu --key-file project.pem
 
