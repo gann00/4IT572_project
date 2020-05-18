@@ -26,7 +26,7 @@ jobs:
           fingerprints:
             - "fd:1c:85:11:54:54:d3:36:bf:c7:5b:13:af:d4:bc:4d"
       - run: echo ${SSH_KEY_FILE_CONTENT} | sed 's/<newline_placeholder>/\n/g' > projekt.pem
-      - run: ssh -i "projekt.pem" ubuntu@ec2-54-144-72-49.compute-1.amazonaws.com
+
       - run: ansible all --list-hosts
       - run: ansible-playbook ./ansible/ec2deploy.yml --user=ubuntu --key-file=projekt.pem  --ssh-common-args='-o StrictHostKeyChecking=no'
 
