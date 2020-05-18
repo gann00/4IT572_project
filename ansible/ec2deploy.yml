@@ -30,7 +30,7 @@
 - name: Configure EC2
   hosts: launched
 
-
+  connection: ssh
 
   tasks:
     - name: Install Docker
