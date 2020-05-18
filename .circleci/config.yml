@@ -25,7 +25,7 @@ jobs:
       - add_ssh_keys:
          fingerprints: 'fd:1c:85:11:54:54:d3:36:bf:c7:5b:13:af:d4:bc:4d'
       - run: ansible all --list-hosts
-      - run: ansible-playbook ./ansible/ec2deploy.yml --user=ubuntu --key-file=projekt.pem  --ssh-common-args='-o StrictHostKeyChecking=no' --private_key_file=~/.ssh/id_rsa
+      - run: ansible-playbook ./ansible/ec2deploy.yml --user=ubuntu --key-file=projekt.pem  --ssh-common-args='-o StrictHostKeyChecking=no' --private-key=~/.ssh/id_rsa
 
 workflows:
   version: 2.1
